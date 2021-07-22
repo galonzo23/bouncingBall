@@ -1,72 +1,9 @@
-<div id="ball" style="
-  z-index: 5;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: cyan">
-</div>
-
-<div id="box" style="
-  z-index: 2;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 350px;
-  height: 350px;
-  border-style: solid;
-  border-color: #333;" >
-</div>
-
-<script>
-  var velocityX = 5; var velocityY = 3;
-  var positionX = 0; var positionY = 0;
-  var reverseX = false; var reverseY = false;
-  var ball = document.getElementById('ball');
-
-  function moveBall() {  
-  // fixed boundaries, x-axis and y-axis coordinates
-    var ballSizeSmall = 25;
-    var ballSizeLarge = 50;
-    var Xmin = 0; var Xmax = 300;
-    var Ymin = 0; var Ymax = 300;  
-    var ballColorSmall = "skyblue";
-    var ballColorLarge = "cyan";
-
-    if(reverseX == false){
-      positionX = positionX + velocityX;
-      ball.style.width = ballSizeLarge + 'px';
-      ball.style.height = ballSizeLarge + 'px';
-      ball.style.background = ballColorLarge;
-      Ymax = 300;
-    }else{
-      positionX = positionX - velocityX;
-      ball.style.width = ballSizeSmall + 'px';
-      ball.style.height = ballSizeSmall + 'px';
-      ball.style.background = ballColorSmall;
-      Ymax = 325;
-    }
-
-    if(reverseY == false){
-      positionY = positionY + velocityY;
-    }else{
-      positionY = positionY - velocityY;
-    }
-
-    if(positionX > Xmax || positionX == Xmin){
-      reverseX = !reverseX;
-    }
-
-    if(positionY > Ymax || positionY == Ymin){
-      reverseY = !reverseY;
-    }
-  
-    ball.style.left = positionX + 'px';
-    ball.style.top = positionY + 'px';
-  }
-
-  //This calls the moveBall function every 5ms
-  setInterval(moveBall, 5);
-</script>
+<html>
+    <h1>Gabe's Portfolio</h1>
+    <img src="./profilePic.jpg" width="60px" />
+        <ul>
+            <li><a href="https://github.com/galonzo23/mypersonalpage.github.io/blob/main/README.md" target="new">Beginner's Guide To Creating a Personal Web Page on GitHub</a></li>
+            <li> <a href="https://galonzo23.github.io/bouncingBall/" target="new">Practice accessing CSS styles using Javascript to simulate a bouncing ball. </a> <a href="https://github.com/galonzo23/bouncingBall">(Git Repo)</a></li>
+        </ul>
+   
+</html>
